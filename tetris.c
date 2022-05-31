@@ -247,7 +247,7 @@ void PrintTab(){                                                                
 
 
 //*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
-//  moves shapes like u want   //
+//  moves shapes like you want //
 //*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
 
 
@@ -256,27 +256,27 @@ void move_TRIO(int action){                                                     
     Shape temp = trio_COPY(current);                                                                //
     switch(action){                                                                                 //
         case 's':                                                                                   //
-            temp.row++;  //move to down                                                             //
+            temp.row++;  //moves to down                                                            //
             if(Position(temp))                                                                      //
                 current.row++;                                                                      //
             else {                                                                                  //
                 WriteToTab();                                                                       //
-                AddPoints(); //check full lines, af_ter putting it down                             //
+                AddPoints(); //checks full lines, after putting it down                             //
                 rdm_shape();                                                                        //
             }                                                                                       //
             break;                                                                                  //
         case 'd':                                                                                   //
-            temp.col++;  //move to right                                                            //
+            temp.col++;  //moves to right                                                           //
             if(Position(temp))                                                                      //
                 current.col++;                                                                      //
             break;                                                                                  //
         case 'q':                                                                                   //
-            temp.col--;  //move to left                                                             //
+            temp.col--;  //moves to left                                                            //
             if(Position(temp))                                                                      //
                 current.col--;                                                                      //
             break;                                                                                  //
         case 'z':                                                                                   //
-            TurnShape_postion(temp);  //change position                                             //
+            TurnShape_postion(temp);  //changes position                                            //
             if(Position(temp))                                                                      //
                 TurnShape_postion(current);                                                         //
             break;                                                                                  //
@@ -292,8 +292,8 @@ void menu()
     int yesNo = 0;
     
     
-        printf("\n\n\n\t\t\t1. do maths");
-        printf("\n\t\t\t2. play");
+        printf("\n\n\n\t\t\t1. Would you like to to maths");
+        printf("\n\t\t\t2. Or would you like to play with me...");
         printf("\n\n\n\t\t\tEnter choice => ");
         scanf("%d",&choice);
         switch(choice)
