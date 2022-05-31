@@ -96,8 +96,8 @@ void moveSnake(int *snakeArray, int dirX, int dirY, int speed, int snakeLength) 
 
 //*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
 void letThereBeApple(int* appleX, int* appleY, int *appleEaten) {
-  /* new random apple location if apple is eaten, if not then prints apple at
-     previous location */
+  /* new random apple location if the apple is eaten, if not then prints the apple at
+     the previous location */
   if (*appleEaten) {
     srand(time(0)); //use current time as seed for random generator
     *appleX = (rand() % MAXWIDTH)+1;
@@ -115,8 +115,7 @@ void letThereBeApple(int* appleX, int* appleY, int *appleEaten) {
 
 //*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
 void eatApple(int *snakeArray, int appleX, int appleY, int *appleEaten, int *snakeLength) {
-  /* if snake find apple get one point, also sets appleEaten to true and
-  prints snakeLength and debug info */
+  /* if the snake finds the apple, he wins one point*/
   int x = *snakeArray;
   int y = *(snakeArray+1);
   if (x == appleX && y == appleY) {
@@ -158,7 +157,7 @@ void maths(void){
         int speed = 20;       /* controls speed of the snake */
         int appleX = 0;       /* current apple xy position */
         int appleY = 0;
-        int appleEaten = 1;   /* is apple eaten? */
+        int appleEaten = 1;   /* is the apple eaten? */
         int snakeLength = 20;  /* player snakeLength */
 
 
@@ -179,7 +178,7 @@ void maths(void){
 
             refresh();
 
-            /* change direction with zqsd */
+            /* change direction with keys "z" "q" "s" d" */
             if (kbhit()) {
               keyPressed = getch();
 
