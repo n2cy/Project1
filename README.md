@@ -19,7 +19,7 @@ make
 
 ---------------------------------------------------------------------------------------
 
-3.to compil this program, write this command in your linux terminal: 
+3.to run this program, write this command in your linux terminal: 
 
 ./run
 
