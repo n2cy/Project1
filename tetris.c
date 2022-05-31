@@ -309,7 +309,7 @@ void menu()
             struct timeval b, a;
             gettimeofday(&b, NULL);
             nodelay(stdscr, TRUE);
-            struct timespec ts = {0, 1000000}; /*sleep for 100 microsec*/
+            struct timespec ts = {0, 1000000}; /*sleeps for 100 microsec*/
             timeout(1);
             inline int is_later(){
                 return ((suseconds_t)(a.tv_sec*1000000 + a.tv_usec) -((suseconds_t)b.tv_sec*1000000 + b.tv_usec)) > timer;
